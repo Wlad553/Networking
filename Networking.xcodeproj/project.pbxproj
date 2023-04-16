@@ -14,7 +14,14 @@
 		F511ABFE29EBE16A003BE4F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F511ABFD29EBE16A003BE4F1 /* Assets.xcassets */; };
 		F511AC0129EBE16A003BE4F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F511ABFF29EBE16A003BE4F1 /* LaunchScreen.storyboard */; };
 		F511AC0929EBE1CB003BE4F1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F511AC0829EBE1CB003BE4F1 /* .gitignore */; };
-		F511AC1129EBF523003BE4F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511AC1029EBF523003BE4F1 /* ViewController.swift */; };
+		F511AC1329EBFD7E003BE4F1 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511AC1229EBFD7E003BE4F1 /* CoursesViewController.swift */; };
+		F511AC1729EC02B9003BE4F1 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511AC1629EC02B9003BE4F1 /* WebViewController.swift */; };
+		F511AC1A29EC0386003BE4F1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511AC1929EC0386003BE4F1 /* TableViewCell.swift */; };
+		F511AC1D29EC058E003BE4F1 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511AC1C29EC058E003BE4F1 /* Course.swift */; };
+		F511AC1F29EC0B41003BE4F1 /* WebsiteDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511AC1E29EC0B41003BE4F1 /* WebsiteDescription.swift */; };
+		F511AC2129EC1DA2003BE4F1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511AC2029EC1DA2003BE4F1 /* MainViewController.swift */; };
+		F511AC2329EC1DB8003BE4F1 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511AC2229EC1DB8003BE4F1 /* CollectionViewCell.swift */; };
+		F511AC2529EC25FE003BE4F1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511AC2429EC25FE003BE4F1 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +34,14 @@
 		F511AC0029EBE16A003BE4F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F511AC0229EBE16A003BE4F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F511AC0829EBE1CB003BE4F1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		F511AC1029EBF523003BE4F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F511AC1229EBFD7E003BE4F1 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
+		F511AC1629EC02B9003BE4F1 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		F511AC1929EC0386003BE4F1 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		F511AC1C29EC058E003BE4F1 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		F511AC1E29EC0B41003BE4F1 /* WebsiteDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteDescription.swift; sourceTree = "<group>"; };
+		F511AC2029EC1DA2003BE4F1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F511AC2229EC1DB8003BE4F1 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		F511AC2429EC25FE003BE4F1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				F511AC0C29EBE41A003BE4F1 /* Application */,
+				F511AC1B29EC055A003BE4F1 /* Models */,
+				F511AC1829EC0370003BE4F1 /* Views */,
 				F511AC0F29EBE470003BE4F1 /* Controllers */,
 				F511AC0A29EBE3F0003BE4F1 /* Supporting Files */,
 			);
@@ -80,6 +96,7 @@
 		F511AC0B29EBE409003BE4F1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F511AC2429EC25FE003BE4F1 /* NetworkManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -116,9 +133,29 @@
 			isa = PBXGroup;
 			children = (
 				F511ABF829EBE169003BE4F1 /* ImageViewController.swift */,
-				F511AC1029EBF523003BE4F1 /* ViewController.swift */,
+				F511AC1229EBFD7E003BE4F1 /* CoursesViewController.swift */,
+				F511AC1629EC02B9003BE4F1 /* WebViewController.swift */,
+				F511AC2029EC1DA2003BE4F1 /* MainViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F511AC1829EC0370003BE4F1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F511AC1929EC0386003BE4F1 /* TableViewCell.swift */,
+				F511AC2229EC1DB8003BE4F1 /* CollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F511AC1B29EC055A003BE4F1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F511AC1C29EC058E003BE4F1 /* Course.swift */,
+				F511AC1E29EC0B41003BE4F1 /* WebsiteDescription.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,10 +230,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F511AC2529EC25FE003BE4F1 /* NetworkManager.swift in Sources */,
+				F511AC1F29EC0B41003BE4F1 /* WebsiteDescription.swift in Sources */,
+				F511AC1D29EC058E003BE4F1 /* Course.swift in Sources */,
 				F511ABF929EBE169003BE4F1 /* ImageViewController.swift in Sources */,
+				F511AC1729EC02B9003BE4F1 /* WebViewController.swift in Sources */,
 				F511ABF529EBE169003BE4F1 /* AppDelegate.swift in Sources */,
-				F511AC1129EBF523003BE4F1 /* ViewController.swift in Sources */,
 				F511ABF729EBE169003BE4F1 /* SceneDelegate.swift in Sources */,
+				F511AC1A29EC0386003BE4F1 /* TableViewCell.swift in Sources */,
+				F511AC1329EBFD7E003BE4F1 /* CoursesViewController.swift in Sources */,
+				F511AC2129EC1DA2003BE4F1 /* MainViewController.swift in Sources */,
+				F511AC2329EC1DB8003BE4F1 /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
