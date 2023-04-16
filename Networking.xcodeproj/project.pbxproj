@@ -59,15 +59,63 @@
 		F511ABF329EBE169003BE4F1 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				F511ABF429EBE169003BE4F1 /* AppDelegate.swift */,
-				F511ABF629EBE169003BE4F1 /* SceneDelegate.swift */,
-				F511ABF829EBE169003BE4F1 /* ViewController.swift */,
-				F511ABFA29EBE169003BE4F1 /* Main.storyboard */,
-				F511ABFD29EBE16A003BE4F1 /* Assets.xcassets */,
-				F511ABFF29EBE16A003BE4F1 /* LaunchScreen.storyboard */,
-				F511AC0229EBE16A003BE4F1 /* Info.plist */,
+				F511AC0C29EBE41A003BE4F1 /* Application */,
+				F511AC0F29EBE470003BE4F1 /* Controllers */,
+				F511AC0A29EBE3F0003BE4F1 /* Supporting Files */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		F511AC0A29EBE3F0003BE4F1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F511ABFD29EBE16A003BE4F1 /* Assets.xcassets */,
+				F511AC0229EBE16A003BE4F1 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F511AC0B29EBE409003BE4F1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F511AC0C29EBE41A003BE4F1 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F511AC0B29EBE409003BE4F1 /* Models */,
+				F511AC0E29EBE43C003BE4F1 /* Views */,
+				F511AC0D29EBE426003BE4F1 /* Controllers */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F511AC0D29EBE426003BE4F1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F511ABF429EBE169003BE4F1 /* AppDelegate.swift */,
+				F511ABF629EBE169003BE4F1 /* SceneDelegate.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F511AC0E29EBE43C003BE4F1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F511ABFF29EBE16A003BE4F1 /* LaunchScreen.storyboard */,
+				F511ABFA29EBE169003BE4F1 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F511AC0F29EBE470003BE4F1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F511ABF829EBE169003BE4F1 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,7 +341,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VQ3NGD79KV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Networking/Info.plist;
+				INFOPLIST_FILE = "Networking/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -321,7 +369,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VQ3NGD79KV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Networking/Info.plist;
+				INFOPLIST_FILE = "Networking/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
