@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WgU-zi-NYY">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
@@ -8,31 +8,90 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Controls-->
+        <scene sceneID="C1O-gX-iDO">
+            <objects>
+                <viewController id="432-1D-epP" customClass="ViewController" customModule="Networking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X9i-YY-l15">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="jpy-c0-SUm">
+                                <rect key="frame" x="16" y="64" width="343" height="452"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IK5-XX-p1Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="130"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="jpE-du-G7v"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Press to Download Image" titleAlignment="center">
+                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="a0d-jO-68q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shd-v6-hU3">
+                                        <rect key="frame" x="0.0" y="161" width="343" height="130"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="9VU-EE-0YF"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="GET" titleAlignment="center">
+                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="getRequest:" destination="432-1D-epP" eventType="touchUpInside" id="qX8-mU-fgI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rp2-8Y-Gpy">
+                                        <rect key="frame" x="0.0" y="322" width="343" height="130"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="LnH-7z-FNe"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="POST" titleAlignment="center">
+                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="postRequest:" destination="432-1D-epP" eventType="touchUpInside" id="32z-iG-NHm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="diu-Fa-fqG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="diu-Fa-fqG" firstAttribute="trailing" secondItem="jpy-c0-SUm" secondAttribute="trailing" constant="16" id="2Ae-JU-3gA"/>
+                            <constraint firstItem="jpy-c0-SUm" firstAttribute="leading" secondItem="diu-Fa-fqG" secondAttribute="leading" constant="16" id="dn1-hn-qOF"/>
+                            <constraint firstItem="jpy-c0-SUm" firstAttribute="top" secondItem="diu-Fa-fqG" secondAttribute="top" id="mXr-3F-3iL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Controls" id="NYo-It-6Ff"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="deV-Ec-yDH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280.80000000000001" y="2.2488755622188905"/>
+        </scene>
+        <!--Image-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Networking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ImageViewController" customModule="Networking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lPa-B4-ecN">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Download an Image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xH-Cq-we5">
-                                <rect key="frame" x="16" y="279" width="343" height="109"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="45"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.22352941179999999" green="0.28235294119999998" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MoX-dh-5o3">
-                                <rect key="frame" x="16" y="20" width="343" height="627"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <connections>
-                                    <action selector="getImagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rrf-UD-V14"/>
-                                </connections>
-                            </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="svF-IM-NeZ">
                                 <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
                             </activityIndicatorView>
@@ -40,31 +99,41 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MoX-dh-5o3" secondAttribute="bottom" constant="20" id="3sv-EK-FXu"/>
-                            <constraint firstAttribute="bottom" secondItem="lPa-B4-ecN" secondAttribute="bottom" id="4Ot-J8-LLT"/>
-                            <constraint firstItem="3xH-Cq-we5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ATH-DU-1Vc"/>
-                            <constraint firstItem="MoX-dh-5o3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="CIn-DE-HpQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lPa-B4-ecN" secondAttribute="bottom" id="4Ot-J8-LLT"/>
                             <constraint firstItem="svF-IM-NeZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GSo-C7-zru"/>
                             <constraint firstItem="svF-IM-NeZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Q52-Rt-mfR"/>
-                            <constraint firstItem="3xH-Cq-we5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pqz-IX-vGN"/>
-                            <constraint firstItem="lPa-B4-ecN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ral-tt-82f"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MoX-dh-5o3" secondAttribute="trailing" constant="16" id="rkI-Zc-e9X"/>
-                            <constraint firstItem="lPa-B4-ecN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="uSm-ef-4dB"/>
-                            <constraint firstAttribute="trailing" secondItem="lPa-B4-ecN" secondAttribute="trailing" id="xRO-7o-w7S"/>
-                            <constraint firstItem="MoX-dh-5o3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yeQ-kR-CvM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3xH-Cq-we5" secondAttribute="trailing" constant="16" id="zKc-e9-3sl"/>
+                            <constraint firstItem="lPa-B4-ecN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ral-tt-82f"/>
+                            <constraint firstItem="lPa-B4-ecN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uSm-ef-4dB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lPa-B4-ecN" secondAttribute="trailing" id="xRO-7o-w7S"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Image" id="Aqs-OW-CtV"/>
                     <connections>
                         <outlet property="activityIndicator" destination="svF-IM-NeZ" id="ply-0x-Ze0"/>
-                        <outlet property="getImageButton" destination="MoX-dh-5o3" id="XDV-vH-Yng"/>
                         <outlet property="imageView" destination="lPa-B4-ecN" id="xVa-3e-X8X"/>
-                        <outlet property="label" destination="3xH-Cq-we5" id="caS-g6-D9u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="4"/>
+            <point key="canvasLocation" x="1076" y="3.1484257871064472"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="f5V-Hb-Vt7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WgU-zi-NYY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qlg-My-hbr">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="432-1D-epP" kind="relationship" relationship="rootViewController" id="3zS-ue-JQm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ZK-4P-k7n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-658.39999999999998" y="2.2488755622188905"/>
         </scene>
     </scenes>
     <resources>
