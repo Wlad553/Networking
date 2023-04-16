@@ -11,7 +11,7 @@ class NetworkManager {
     
     private init() {}
     
-    class func getRequest(urlString: String) {
+    static func getRequest(urlString: String) {
         guard let url = URL(string: urlString) else { return }
         let session = URLSession.shared
         session.dataTask(with: url) { data, response, error in
@@ -26,7 +26,7 @@ class NetworkManager {
         }.resume()
     }
     
-    class func postRequest(urlString: String) {
+    static func postRequest(urlString: String) {
         guard let url = URL(string: urlString) else { return }
         let userData = ["Course": "Networking", "Lesson": "GET and POST Requests"]
         
@@ -54,7 +54,7 @@ class NetworkManager {
         }.resume()
     }
     
-    class func downloadImage(url: String, completion: @escaping (_ image: UIImage?) -> Void) {
+    static func downloadImage(url: String, completion: @escaping (_ image: UIImage?) -> Void) {
         guard let url = URL(string: url) else { return }
         
         let session = URLSession.shared
@@ -74,7 +74,7 @@ class NetworkManager {
         }.resume()
     }
     
-    class func fetchData(urlString: String, completion: @escaping ([Course]) -> Void) {
+    static func fetchData(urlString: String, completion: @escaping ([Course]) -> Void) {
         guard let url = URL(string: urlString) else { return }
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data else { return }
@@ -92,6 +92,33 @@ class NetworkManager {
                 print("Error serialization json: \(error)")
             }
             
+        }.resume()
+    }
+    
+    static func uploadImage(url: String) {
+        
+        guard let image = UIImage(named: "Notification"),
+              let imageProperties = ImageProperties(withImage: image, forKey: "image"),
+              let url = URL(string: url)
+        else { return }
+        let httpHeaders = ["Authorization": "Client-ID 8e17219612ec5ca"]
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.allHTTPHeaderFields = httpHeaders
+        request.httpBody = imageProperties.data
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let response = response {
+                print(response)
+            }
+            if let data = data {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data)
+                    print(json)
+                } catch {
+                    print(error)
+                }
+            }
         }.resume()
     }
 }

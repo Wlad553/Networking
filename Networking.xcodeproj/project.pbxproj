@@ -22,6 +22,7 @@
 		F511AC2129EC1DA2003BE4F1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511AC2029EC1DA2003BE4F1 /* MainViewController.swift */; };
 		F511AC2329EC1DB8003BE4F1 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511AC2229EC1DB8003BE4F1 /* CollectionViewCell.swift */; };
 		F511AC2529EC25FE003BE4F1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511AC2429EC25FE003BE4F1 /* NetworkManager.swift */; };
+		F511AC2729EC544D003BE4F1 /* ImageProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511AC2629EC544D003BE4F1 /* ImageProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		F511AC2029EC1DA2003BE4F1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F511AC2229EC1DB8003BE4F1 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		F511AC2429EC25FE003BE4F1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F511AC2629EC544D003BE4F1 /* ImageProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProperties.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			children = (
 				F511AC1C29EC058E003BE4F1 /* Course.swift */,
 				F511AC1E29EC0B41003BE4F1 /* WebsiteDescription.swift */,
+				F511AC2629EC544D003BE4F1 /* ImageProperties.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				F511ABF529EBE169003BE4F1 /* AppDelegate.swift in Sources */,
 				F511ABF729EBE169003BE4F1 /* SceneDelegate.swift in Sources */,
 				F511AC1A29EC0386003BE4F1 /* TableViewCell.swift in Sources */,
+				F511AC2729EC544D003BE4F1 /* ImageProperties.swift in Sources */,
 				F511AC1329EBFD7E003BE4F1 /* CoursesViewController.swift in Sources */,
 				F511AC2129EC1DA2003BE4F1 /* MainViewController.swift in Sources */,
 				F511AC2329EC1DB8003BE4F1 /* CollectionViewCell.swift in Sources */,
