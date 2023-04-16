@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lPa-B4-ecN">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lPa-B4-ecN">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Download an Image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xH-Cq-we5">
@@ -33,6 +33,9 @@
                                     <action selector="getImagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rrf-UD-V14"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="svF-IM-NeZ">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -41,6 +44,8 @@
                             <constraint firstAttribute="bottom" secondItem="lPa-B4-ecN" secondAttribute="bottom" id="4Ot-J8-LLT"/>
                             <constraint firstItem="3xH-Cq-we5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ATH-DU-1Vc"/>
                             <constraint firstItem="MoX-dh-5o3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="CIn-DE-HpQ"/>
+                            <constraint firstItem="svF-IM-NeZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GSo-C7-zru"/>
+                            <constraint firstItem="svF-IM-NeZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Q52-Rt-mfR"/>
                             <constraint firstItem="3xH-Cq-we5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pqz-IX-vGN"/>
                             <constraint firstItem="lPa-B4-ecN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ral-tt-82f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MoX-dh-5o3" secondAttribute="trailing" constant="16" id="rkI-Zc-e9X"/>
@@ -51,6 +56,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="svF-IM-NeZ" id="ply-0x-Ze0"/>
                         <outlet property="getImageButton" destination="MoX-dh-5o3" id="XDV-vH-Yng"/>
                         <outlet property="imageView" destination="lPa-B4-ecN" id="xVa-3e-X8X"/>
                         <outlet property="label" destination="3xH-Cq-we5" id="caS-g6-D9u"/>
