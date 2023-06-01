@@ -1,4 +1,4 @@
 # Networking
-Project example with usage of Alamofire
+Project example with usage of:
 * URLSession
 * Alamofire
