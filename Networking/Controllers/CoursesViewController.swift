@@ -16,16 +16,18 @@ class CoursesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        fetchData()
-    }
-    
     func fetchData() {
 //        let jsonURLString = "https://swiftbook.ru//wp-content/uploads/api/api_course"
 //        let jsonURLString = "https://swiftbook.ru//wp-content/uploads/api/api_website_description"
 //        let jsonURLString = "https://swiftbook.ru//wp-content/uploads/api/api_missing_or_wrong_fields"
         NetworkManager.fetchData(urlString: url) { courses in
+            self.courses = courses
+            self.tableView.reloadData()
+        }
+    }
+    
+    func fetchDataWithAlamofire() {
+        AlamofireNetworkRequest.sendRequest(url: url) { courses in
             self.courses = courses
             self.tableView.reloadData()
         }

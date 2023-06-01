@@ -91,7 +91,6 @@ class NetworkManager {
             } catch let error {
                 print("Error serialization json: \(error)")
             }
-            
         }.resume()
     }
     
